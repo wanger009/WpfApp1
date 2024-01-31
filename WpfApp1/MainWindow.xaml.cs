@@ -18,7 +18,7 @@ namespace WpfApp1
 
     public partial class MainWindow : Window
     {
-        
+        private List<int> numbers = new List<int>();
 
         public MainWindow()
         {
@@ -27,7 +27,12 @@ namespace WpfApp1
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
+            if (int.TryParse(inputTextBox.Text, out int input))
+            {
+                numbers.Add(input);
+                numbersTextBlock.Text = $"Megadott számok: {string.Join(", ", numbers)}";
+                inputTextBox.Clear();
+            }
         }
 
         private void MinimumButton_Click(object sender, RoutedEventArgs e)
