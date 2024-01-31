@@ -5,8 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBox x:Name="inputTextBox" Width="100" Margin="0,0,0,10" />
+            <Button Content="Hozzáadás" Width="100" Margin="0,0,0,10" Click="Button_Click" />
+            <TextBlock x:Name="numbersTextBlock" TextAlignment="Center"/>
+            <Button Content="Minimum" Width="100" Click="MinimumButton_Click" />
+            <Button Content="Maximum" Width="100" Click="MaximumButton_Click" />
+        </StackPanel>
     </Grid>
 </Window>
