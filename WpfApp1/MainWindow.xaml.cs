@@ -50,7 +50,15 @@ namespace WpfApp1
 
         private void MaximumButton_Click(object sender, RoutedEventArgs e)
         {
-           
+            if (numbers.Count > 0)
+            {
+                int max = numbers.Max();
+                MessageBox.Show($"Maximum: {max}");
+            }
+            else
+            {
+                MessageBox.Show("Nem adott meg számot.");
+            }
         }
     }
 }
