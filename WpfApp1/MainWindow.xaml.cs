@@ -37,7 +37,15 @@ namespace WpfApp1
 
         private void MinimumButton_Click(object sender, RoutedEventArgs e)
         {
-            
+            if (numbers.Count > 0)
+            {
+                int min = numbers.Min();
+                MessageBox.Show($"Minimum: {min}");
+            }
+            else
+            {
+                MessageBox.Show("Nem adott meg számot.");
+            }
         }
 
         private void MaximumButton_Click(object sender, RoutedEventArgs e)
